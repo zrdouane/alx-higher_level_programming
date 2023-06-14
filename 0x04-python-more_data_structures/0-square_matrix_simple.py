@@ -1,5 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 
 def square_matrix_simple(matrix=[]):
-    new = ([[c**2 for c in row] for row in matrix])
-    return(new)
+    return [[num ** 2 for num in row] for row in matrix]
