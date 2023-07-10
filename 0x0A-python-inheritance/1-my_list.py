@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-"""
-The container of MyList class inherit from list
-"""
 
+"""MyList class inherit from list"""
 
 
 class MyList(list):
