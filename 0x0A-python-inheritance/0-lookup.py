@@ -4,10 +4,12 @@
 Module for lookup function
 """
 
+
 def lookup(obj):
     """
     Args:
-        obj: initial
-        Returns: a list of attributes
+        obj: initial object
+        Returns: a list of available attributes and
+                 methods of an object
     """
     return dir(obj)
