@@ -35,4 +35,3 @@ def add_item(args):
 
 if __name__ == "__main__":
     add_item(sys.argv)
-
