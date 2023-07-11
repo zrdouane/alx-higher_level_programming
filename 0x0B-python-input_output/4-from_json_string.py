@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
 
-"""function that returns an object."""
+"""
+Module for from_json_string method.
+"""
 
 
 import json
@@ -15,4 +17,3 @@ def from_json_string(my_str):
         my_str {str} -- [string to be converted]
     """
     return json.loads(my_str)
-
