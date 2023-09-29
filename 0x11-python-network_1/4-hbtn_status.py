@@ -2,11 +2,10 @@
 """
 Python script that fetches https://intranet.hbtn.io/status
 """
-import requests
-
 if __name__ == "__main__":
-    url = "https://intranet.hbtn.io/status"
-    req = requests.get(url)
+    import requests
+
+    response = requests.get("https://alx-intranet.hbtn.io/status")
     print("Body response:")
-    print("\t- type: {}".format(type(req.text)))
-    print("\t- content: {}".format(req.text))
+    print("\t- type:", type(response.content.decode()))
+    print("\t- content:", response.content.decode())
