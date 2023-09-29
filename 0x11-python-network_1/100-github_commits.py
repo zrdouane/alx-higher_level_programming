@@ -8,15 +8,21 @@ You are not allowed to import packages other than requests and sys
 You don’t need to check arguments passed to the script (number or type)
 """
 
-import requests
-from sys import argv
-
 if __name__ == "__main__":
-    repository = argv[1]
-    owner = argv[2]
-    url = "https://api.github.com/repos/{}/{}/commits".format(owner, repository)
-    r = requests.get(url)
-    commits = r.json()
-    for commit in commits[:10]:
-        print("{}: {}".format(commit.get("sha"),
-                              commit.get("commit").get("author").get("name")))
+    import sys
+    import requests
+
+    url = "https://api.github.com/repos/{}/{}/commits".format(
+        sys.argv[2], sys.argv[1])
+    try:
+        response = requests.get(url)
+        res = response.json()
+        for i in range(0, 10):
+            print(
+                "{}: {}".format(
+                    res[i].get("sha"),
+                    res[i].get("commit").get("author").get("name"),
+                )
+            )
+    except Exception:
+        pass
