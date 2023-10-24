@@ -6,9 +6,9 @@ const req = require('request');
 const api = process.argv[2];
 
 req(api, (err, res, body) => {
-  if (err){
-	console.log(err);
-  }   else {
+  if (err) {
+    console.log(err);
+  } else {
     let count = 0;
     const results = JSON.parse(body).results;
     for (let i = 0; i < results.length; i++) {
